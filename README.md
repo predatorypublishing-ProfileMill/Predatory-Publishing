@@ -6,7 +6,7 @@ This repository contains all notebooks, scripts, and data needed to reproduce th
 
 ### Download & Extract
 
-- Unzip the package to a local path.
+- Unzip the package to a local path, put the data folder under the main directory.
 - Do not change any directory or file names.
 
 ### Create Environment (Conda recommended)
@@ -18,15 +18,24 @@ pip install -U pip wheel
 pip install jupyterlab pandas numpy scipy matplotlib networkx python-louvain scikit-learn openpyxl tqdm
 ```
 
-### Launch Jupyter
-
-```bash
-jupyter lab
-```
-
-Open any *.ipynb from the project root, then run (Kernel → Restart & Run All).
-
 ### Notes on data/:
+
+data/
+├── country_income.csv
+├── norm/
+│   ├── dataset/
+│   │   ├── csv/
+│   │   └── pkl/
+│   └── metadata/
+├── pred/
+│   ├── dataset/
+│   │   ├── csv/
+│   │   └── pkl/
+│   └── metadata/
+├── shared_analysis.csv
+├── shared_journal_papers.csv
+├── similarity_matrix_30_abs_clean.csv
+└── topic_period_dup_order_stats.csv
 
 - Shared metadata (used by multiple notebooks) resides directly under data/ (e.g., shared_analysis.csv, shared_journal_papers.csv, topic_period_dup_order_stats.csv).
 - Each dataset (norm/, pred/) contains:
@@ -37,10 +46,10 @@ Open any *.ipynb from the project root, then run (Kernel → Restart & Run All).
 
 - Contains the figures that appear in the paper. Notebooks may read from or export to this directory.
 
-## Notebooks (1:1 with Experiments in Papers)
+## Notebooks
 
 - **citation_growth.ipynb** — Citation growth & temporal evolution analyses and visualizations.
-- **citation_network.ipynb** — Citation network construction, topology, and community detection (consumes outputs produced by lovain_*.py).
+- **citation_network.ipynb** — Louvain Clustering, Citation network construction, topology, and community detection.
 - **citation_preference.ipynb** — Citation preference/propensity metrics and comparative experiments.
 - **collaboration_network.ipynb** — Collaboration network and frequently collaborated authors affiliation relation.
 - **journal_analysis.ipynb** — Journal-level analyses (ISSN metrics, distributions, contributions).
@@ -54,8 +63,6 @@ Open any *.ipynb from the project root, then run (Kernel → Restart & Run All).
 All notebooks read paths relative to the project root. Keep the folder names and hierarchy intact.
 
 ## Scripts
-
-- **lovain_norm.py / lovain_pred.py**: Louvain community detection & network statistics for the corresponding datasets; notebooks consume the produced artifacts (e.g., under metadata/louvain/).
 - **openalex_issn_indices_api.py**: Utilities to collect journal/ISSN metrics and cache them under data/.
 
 You do not need to rerun these scripts to reproduce the paper’s results; they are provided for completeness and re-training if needed.
@@ -63,8 +70,6 @@ You do not need to rerun these scripts to reproduce the paper’s results; they 
 ## Reproducibility & Conventions
 
 - One-click run: unzip → create env → open notebook from repo root → “Run All”.
-- Data I/O: notebooks prefer PKL when available (faster), otherwise read CSV; outputs (intermediate tables/figures) are written to existing directories without altering raw inputs.
-- Randomness: where applicable, seeds are fixed to reduce variance; minor numerical/plotting differences may still occur and are acceptable.
 
 ## Minimal Dependencies
 
@@ -82,10 +87,9 @@ If a package is missing at runtime, install it via:
 pip install <package>
 ```
 
-## Citation
-
-If this repository or its data are useful in your research, please acknowledge or cite this project in your paper. BibTeX:xxxx 
-
-## License
+## License`
 
 Unless otherwise noted, the materials are provided for academic research use. For commercial use or redistribution, please contact the authors.
+
+
+[![DOI](https://zenodo.org/badge/1091328274.svg)](https://doi.org/10.5281/zenodo.17547082)
