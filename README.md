@@ -19,8 +19,9 @@ pip install jupyterlab pandas numpy scipy matplotlib networkx python-louvain sci
 ```
 
 ### Notes on data/:
-
+```txt
 data/
+  
 ├── country_income.csv
 ├── norm/
 │   ├── dataset/
@@ -36,6 +37,7 @@ data/
 ├── shared_journal_papers.csv
 ├── similarity_matrix_30_abs_clean.csv
 └── topic_period_dup_order_stats.csv
+```
 
 - Shared metadata (used by multiple notebooks) resides directly under data/ (e.g., shared_analysis.csv, shared_journal_papers.csv, topic_period_dup_order_stats.csv).
 - Each dataset (norm/, pred/) contains:
@@ -61,11 +63,7 @@ data/
 
 
 All notebooks read paths relative to the project root. Keep the folder names and hierarchy intact.
-
-## Scripts
-- **openalex_issn_indices_api.py**: Utilities to collect journal/ISSN metrics and cache them under data/.
-
-You do not need to rerun these scripts to reproduce the paper’s results; they are provided for completeness and re-training if needed.
+To reproduce the paper’s results, you do not need to rerun some of experiments (such as API calls and clustering), the metadata is provided in the 'data/' folder; they are provided for completeness and re-training if needed.
 
 ## Reproducibility & Conventions
 
