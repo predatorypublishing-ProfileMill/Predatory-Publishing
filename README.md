@@ -6,8 +6,8 @@ This repository contains all notebooks, scripts, and data needed to reproduce th
 
 ### Download & Extract
 
-- Unzip the package to a local path, put the data folder under the main directory.
-- Do not change any directory or file names.
+- Unzip the package to a local path, unzip 'norm.tar.xz' and 'pred.tar.xz' and put them in '/data'.
+- No need to change any directory or file names.
 
 ### Create Environment (Conda recommended)
 
