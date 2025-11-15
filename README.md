@@ -85,7 +85,7 @@ If a package is missing at runtime, install it via:
 pip install <package>
 ```
 
-## License`
+## License
 
 Unless otherwise noted, the materials are provided for academic research use. For commercial use or redistribution, please contact the authors.
 
