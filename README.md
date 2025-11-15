@@ -50,20 +50,20 @@ data/
 
 ## Notebooks
 
-- **citation_growth.ipynb** — Citation growth & temporal evolution analyses and visualizations.
-- **citation_network.ipynb** — Louvain Clustering, Citation network construction, topology, and community detection.
-- **citation_preference.ipynb** — Citation preference/propensity metrics and comparative experiments.
-- **collaboration_network.ipynb** — Collaboration network and frequently collaborated authors affiliation relation.
-- **journal_analysis.ipynb** — Journal-level analyses (ISSN metrics, distributions, contributions).
-- **single_repeated_authors.ipynb** — Repeated publishing and individual-level differences.
-- **Socioeconomic.ipynb** — Associations with socioeconomic factors (uses country_income.csv).
-- **temporal.ipynb** — Time-sliced statistics and robustness checks.
-- **topic_analysis.ipynb** — Topic-level comparisons and interpretation.
-- **topic_test.ipynb** — Topic method validation and auxiliary experiments.
-
+- **citation_growth.ipynb** — Citation growth and temporal evolution analyses: yearly citation count trend and growth-rate comparisons.
+- **citation_network.ipynb** — Citation network construction, Louvain clustering, community detection, and analysis of coordinated citation structures.
+- **citation_preference.ipynb** — Citation-target preference analyses, including AI-to-AI citation tendencies and source–target composition contrasts.
+- **cross_topic_citation.ipynb** — Measurement of cross-topic citation patterns using BERTopic-derived topic distances and identification of weak or cross-boundary citation links.
+- **self_citation.ipynb** — Detection and quantification of self-citation behavior at the author level, with comparisons between Predatory and Normal authors.
+- **collaboration_network.ipynb** — Co-authorship network construction, identification of frequent collaborators, institutional-coherence measurement, and affiliation–country homophily analyses.
+- **single_repeated_authors.ipynb** — Analysis of repeated author-order motifs, single authorship paper, and comparison of templated collaboration patterns before and after the LLM era.
+- **Socioeconomic.ipynb** — Author-country inference using surnames and affiliation data, income-group distributions, and socioeconomic composition comparisons.
+- **temporal.ipynb** — Temporal indicators of production behavior, including yearly changes in activity, author-level output timelines, and expansion patterns.
+- **topic_analysis.ipynb** — Topic modeling with BERTopic, topic-breadth classification using Gaussian mixture modeling, and quantification of author thematic consistency.
+- **journal_analysis.ipynb** — Journal-level metric retrieval (e.g., h-index, i10-index, cited-by counts), quality-gap comparisons, and characterization of low-barrier or rapidly expanding venues.
 
 All notebooks read paths relative to the project root. Keep the folder names and hierarchy intact.
-To reproduce the paper’s results, you do not need to rerun some of experiments (such as API calls and clustering), the metadata is provided in the 'data/' folder; they are provided for completeness and re-training if needed.
+To reproduce the paper’s results, you do not need to rerun some of experiments (such as API calls and clustering), they are provided for completeness and re-training if needed. Instead, the metadata is provided in the 'data/' folder, and can be directly used.
 
 ## Reproducibility & Conventions
 
